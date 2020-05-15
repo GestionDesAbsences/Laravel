@@ -18,7 +18,7 @@ class CreateClassesTable extends Migration
             $table->string('nom_classe');
             $table->bigInteger('id_etud')->unsigned();
             $table->timestamps();
-            $table->foreign('id_etud')->references('id_etud')->on('etudiants');
+            $table->foreign('id_etud')->references('id')->on('etudiants');
         });
     }
 

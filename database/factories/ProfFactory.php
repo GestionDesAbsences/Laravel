@@ -10,8 +10,8 @@ $factory->define(Prof::class, function (Faker $faker) {
     return [
         'id_admin'=>Admin::all()->random()->id_admin,
         'name'=>$faker->name,
-        'email'=>$faker->email,
-        'password'=>$faker->password,
+       // 'email'=>$faker->email,
+       // 'password'=>$faker->password,
         'tel'=>$faker->e164PhoneNumber,
         'created_at'=>now(),
         'updated_at'=>now(),

@@ -7,10 +7,8 @@ use Faker\Generator as Faker;
 
 $factory->define(Admin::class, function (Faker $faker) {
     return [
-        //'name'=>$faker->name,
-        'email'=>$faker->email,
-        //'email_verified_at'=>now(),
-        'password'=>$faker->password,
+        'email'=>'admin@iset.com',
+        'password'=>Hash::make('admin'),
         'created_at'=>now(),
         'updated_at'=>now(),
     ];

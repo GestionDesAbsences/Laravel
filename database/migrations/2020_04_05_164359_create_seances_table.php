@@ -20,7 +20,7 @@ class CreateSeancesTable extends Migration
             $table->string('matiere');
             $table->bigInteger('id_prof')->unsigned();
             $table->bigInteger('id_classe')->unsigned();
-            $table->foreign('id_prof')->references('id_prof')->on('profs');
+            $table->foreign('id_prof')->references('id')->on('profs');
             $table->foreign('id_classe')->references('id_classe')->on('classes');
             $table->timestamps();
         });

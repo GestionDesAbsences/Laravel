@@ -10,4 +10,8 @@ class Etudiant extends Model
     {
         return $this->belongsTo('App\Classe');
     }
+    public function users()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

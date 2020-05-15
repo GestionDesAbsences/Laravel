@@ -19,7 +19,7 @@ class CreateAbsencesTable extends Migration
             $table->bigInteger('id_seance')->unsigned();
             $table->boolean('retard');
             $table->boolean('absences');
-            $table->foreign('id_etud')->references('id_etud')->on('etudiants');
+            $table->foreign('id_etud')->references('id')->on('etudiants');
             $table->foreign('id_seance')->references('id_seance')->on('seances');
 
         });

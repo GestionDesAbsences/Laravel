@@ -10,8 +10,8 @@ class Prof extends Model
     {
         return $this->hasMany('App\Seance');
     }
-    public function Admins()
+    public function users()
     {
-        return $this->belongsTo('App\Admin');
+        return $this->belongsTo('App\User');
     }
 }
