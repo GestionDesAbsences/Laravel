@@ -11,6 +11,6 @@ class ProfsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Prof::class,50)->create();
+        factory(Prof::class,5)->create();
     }
 }

@@ -17,12 +17,17 @@ use Faker\Generator as Faker;
 */
 
 $factory->define(User::class, function (Faker $faker) {
+
+    $roleUsers = ['prof','etudiant', 'admin']; // role par default
+    $randRole = $roleUsers[array_rand($roleUsers)]; // choisir un role 
+    $password = ($randRole === 'admin' ? 'admin' : '12345678'); //mot de passe 'admin' si le role est admin
+                                                                // sinon le mot de passe sera '123456789'
     return [
         //'name' => $faker->name,
-        'email'=>'admin@iset.com',
-        'password'=>Hash::make('admin'),
+        'email'=> str_random(10).'@gmail.com',
+        'password'=>Hash::make($password),
         'email_verified_at' => now(),
-        //'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'role' => $randRole,
         'remember_token' => Str::random(10),
     ];
 });

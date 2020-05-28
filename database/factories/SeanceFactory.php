@@ -12,7 +12,7 @@ $factory->define(Seance::class, function (Faker $faker) {
         'date_debut'=>$faker->date,
         'date_fin'=>$faker->date,
         'matiere'=>$faker->sentence,
-        'id_prof'=>Prof::all()->random()->id_prof,
+        'id_prof'=>Prof::all()->random()->id,
         'id_classe'=>Classe::all()->random()->id_classe,
         'created_at'=>now(),
         'updated_at'=>now(),

@@ -41,7 +41,7 @@
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#"><span class="glyphicon glyphicon-dashboard"></span> <b>Dashboard</b></a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-plane"></span> Profs</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-cloud"></span> Etudiant</a></li>
+					<li><a href="/etudiant"><span class="glyphicon glyphicon-cloud"></span> Etudiant</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-cloud"></span> classes</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-cloud"></span> exmples</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-cloud"></span> expl2</a></li>

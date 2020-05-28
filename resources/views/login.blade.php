@@ -73,6 +73,9 @@
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 									</div>
 									<div class="form-group">
+										<input type="text" name="phone" id="phone" tabindex="1" class="form-control" placeholder="phone" value="">
+									</div>
+									<div class="form-group">
 										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
 									</div>
 									<div class="form-group">
@@ -81,6 +84,13 @@
 									<div class="form-group">
 										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
 									</div>
+									<div>
+									<label for="role">Choisir un role:</label>
+									<select id="role" name="role">
+											<option value="prof">prof</option>
+											<option value="etudiant">etudiant</option>
+									</select>
+									</div>	
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">

@@ -3,15 +3,13 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Prof;
-use App\Admin;
+use App\User;
 use Faker\Generator as Faker;
 
 $factory->define(Prof::class, function (Faker $faker) {
     return [
-        'id_admin'=>Admin::all()->random()->id_admin,
+        'id_user'=>User::where('role','prof')->inRandomOrder()->first()->id,
         'name'=>$faker->name,
-       // 'email'=>$faker->email,
-       // 'password'=>$faker->password,
         'tel'=>$faker->e164PhoneNumber,
         'created_at'=>now(),
         'updated_at'=>now(),
