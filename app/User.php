@@ -19,13 +19,13 @@ class User extends Authenticatable
          'email', 'password',
         
     ];
-    public function Profs()
+    public function Prof()
     {
-        return $this->hasOne('App\Prof');
+        return $this->hasOne('App\Prof' ,  'id_user', 'id');
     }
-    public function Etudiants()
+    public function Etudiant()
     {
-        return $this->hasOne('App\Etudiant');
+        return $this->hasOne('App\Etudiant' ,  'id_user', 'id');
     }
 
 
