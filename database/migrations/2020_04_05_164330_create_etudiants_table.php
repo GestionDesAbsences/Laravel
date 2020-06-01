@@ -20,7 +20,7 @@ class CreateEtudiantsTable extends Migration
            // $table->text('password');
             $table->string('tel');
             $table->bigInteger('id_user')->unsigned();
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
