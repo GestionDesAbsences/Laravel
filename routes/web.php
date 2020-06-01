@@ -17,8 +17,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/', 'HomeController@index')->name('home');
 });
 
-
 Route::get('login', 'HomeController@login')->name('login');
 Route::post('submit/login', 'HomeController@submitLogin')->name('submit_login');
 Route::get('logout', 'HomeController@logout')->name('logout');
 Route::resource('etudiant', 'EtudiantController');
+Route::resource('prof', 'ProfController');
