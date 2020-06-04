@@ -93,7 +93,7 @@
                                 <?php
                                     $tmp = \App\Prof::find($conge->id_prof);
                                 ?>
-                                <td>{{ $tmp->name }}</td>
+                                <td>{{ $tmp->name  }}</td>
                                 <td>{{ $conge->start }}</td>
                                 <td>{{ $conge->end }}</td>
                             </tr>
