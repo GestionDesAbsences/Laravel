@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -33,6 +34,8 @@ class HomeController extends Controller
     {
         return view('login');
     }
+
+
     public function logout(Request $request) {
         Auth::logout();
         return redirect('/login');
@@ -41,6 +44,12 @@ class HomeController extends Controller
     public function submitLogin(Request $request) {
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
+            $user = User::where('email', '=', $credentials['email'])->firstOrFail();
+            $role = $user->role;
+            switch ($role) {
+                case "prof": return redirect()->route('prof.account');
+                case "etudiant": return redirect()->route('etudiant.account');
+            }
             return redirect()->route('home');
         }
         else {

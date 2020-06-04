@@ -44,7 +44,7 @@
 					<li><a href="/etudiant"><span class="glyphicon glyphicon-user"></span> Etudiant</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-cloud"></span> classes</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-cloud"></span> exmples</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-cloud"></span> expl2</a></li>
+					<li><a href="/absences"><span class="glyphicon glyphicon-cloud"></span> Absences</a></li>
 					
 
 					<li><a href="{{ route('logout') }}"><span class="glyphicon glyphicon-off"></span> LogOut</a></li>
