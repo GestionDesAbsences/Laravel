@@ -30,3 +30,8 @@ Route::get('/conge/approuve/{id}', 'AbsenceController@approuve')->name('conge.ap
 Route::resource('etudiant', 'EtudiantController');
 Route::resource('prof', 'ProfController');
 
+
+
+
+
+Route::get('laravel-send-email', 'EmailController@sendEMail');

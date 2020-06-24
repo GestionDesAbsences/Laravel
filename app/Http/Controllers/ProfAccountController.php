@@ -9,6 +9,8 @@ use App\Seance;
 use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailEtudiant;
 
 class ProfAccountController extends Controller {
 
@@ -48,6 +50,7 @@ class ProfAccountController extends Controller {
         ]);
         $a->save();
 
+        $this->sendEmail(/**$user->email*/);
         return redirect()->route('prof.account')
             ->with('success', 'Absence Ajouter Avec Success');
     }
@@ -67,6 +70,19 @@ class ProfAccountController extends Controller {
         $conge->save();
 
         return $this->redirect()->route('prof.account');
+    }
+
+    public function sendEmail(/**$email*/)
+    {
+        $data['title'] = "This is Test Mail Tuts Make";
+ 
+        Mail::send('emails.email', $data, function($message) {
+ 
+            $message->to('islemlabidi1205@gmail.com', 'Projet LARAVEL')
+ 
+                    ->subject('Absence');
+        });
+ 
     }
 
 }

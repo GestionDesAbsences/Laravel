@@ -88,19 +88,21 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">Prof</th>
+                                    <th scope="col">Absence</th>
+                                    <th scope="col">Retard</th>
+                                    <th scope="col">Date</th>
                                 </tr>
                             </thead>
                             <tbody>
+                            @foreach($absences as $absence)
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
+                                    <th scope="row">{!! $absence->Prof->name !!}</th>
+                                    <td>{!! $absence->absences ? 'Oui' : 'Non' !!}</td>
+                                    <td>{!! $absence->retard ? 'Oui' : 'Non' !!}</td>
+                                    <td>{!! $absence->Seances->date_debut !!}</td>/
                                 </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>

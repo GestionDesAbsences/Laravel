@@ -13,8 +13,11 @@ class EtudiantAccountController extends Controller {
     public function home() {
         $user = Auth::user();
         $etudiant = Etudiant::find($user->id);
+        $absences = Absence::take(10)->get();
+        
         return view('account.etudiant.home', [
-            'etudiant' => $etudiant
+            'etudiant' => $etudiant,
+            'absences' => $absences,
         ]);
     }
 

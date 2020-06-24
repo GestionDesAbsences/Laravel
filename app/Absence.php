@@ -15,11 +15,11 @@ class Absence extends Model
     ];
 
     public function Prof() {
-        return $this->hasOne('App\Prof');
+        return $this->belongsTo('App\Prof','id_prof');
     }
 
     public function Seances()
     {
-        return $this->hasMany('App\Seance');
+        return $this->belongsTo('App\Seance','id_seance');
     }
 }
